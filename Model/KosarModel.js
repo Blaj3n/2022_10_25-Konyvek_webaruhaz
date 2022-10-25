@@ -4,12 +4,14 @@ class KosarModel {
   constructor() {
     console.log("KosarModel");
   }
-    adatKosarbarak(adat) {
+  adatKosarbarak(adat) {
     console.log("Kosárba Rak", adat);
   }
-
-  getKosarTomb(){
+  getKosarTomb() {
     return this.#kosarTomb;
+  }
+  kosarba(elem) {
+    this.#kosarTomb.push(elem);
   }
 }
 
