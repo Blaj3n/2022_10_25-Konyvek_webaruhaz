@@ -1,10 +1,12 @@
 import KonyvekView from "../View/KonyvekView.js";
 import KonyvModel from "../Model/KonyvModel.js";
 import KonyvekPublicView from "../View/KonyvekPublicView.js";
+import KosarModel from "../Model/KosarModel.js";
 
 class KonyvController {
   constructor() {
     const konyvmodel = new KonyvModel();
+    const kosarmodel = new KosarModel();
     $("#admin").on("click", () => {
       konyvmodel.adatBe("../adat.json", this.konyvAdatok);
     });
@@ -22,6 +24,7 @@ class KonyvController {
     });
     $(window).on("kosar", (event) => {
       console.log("Kosárba rak", event.detail);
+      kosarmodel.kosarbaRak(event.detail);
     });
   }
 

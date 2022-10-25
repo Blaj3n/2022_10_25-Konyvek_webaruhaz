@@ -2,7 +2,7 @@ class KosarModel {
   #kosarTomb = [];
 
   constructor() {
-    console.log("KosarModel");
+    //console.log("KosarModel");
   }
   adatKosarbarak(adat) {
     console.log("Kosárba Rak", adat);
@@ -10,8 +10,9 @@ class KosarModel {
   getKosarTomb() {
     return this.#kosarTomb;
   }
-  kosarba(elem) {
+  kosarbaRak(elem) {
     this.#kosarTomb.push(elem);
+    console.log(this.#kosarTomb);
   }
 }
 
